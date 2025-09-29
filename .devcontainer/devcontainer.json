@@ -16,7 +16,7 @@
       ]
     }
   },
-  "postCreateCommand": "corepack enable && npm i -g pnpm@9 && pnpm -v",
+  "postCreateCommand": "corepack enable && npm i -g pnpm@9 && if [ -f package.json ]; then pnpm install; fi && pnpm -v",
   "postStartCommand": "echo 'Devcontainer ready'",
   "remoteUser": "node"
 }

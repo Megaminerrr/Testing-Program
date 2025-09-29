@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "source": "placeholder",
+  "questions": [
+    {
+      "id": "math-1",
+      "category": "math",
+      "prompt": "What is 3 × 3?",
+      "choices": [
+        { "text": "6" },
+        { "text": "8" },
+        { "text": "9", "correct": true },
+        { "text": "12" }
+      ]
+    },
+    {
+      "id": "gen-1",
+      "category": "general",
+      "prompt": "The capital of France is?",
+      "choices": [
+        { "text": "Berlin" },
+        { "text": "Paris", "correct": true },
+        { "text": "Madrid" },
+        { "text": "Rome" }
+      ]
+    }
+  ]
+}
