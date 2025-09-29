@@ -1,0 +1,37 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #2563eb;
+  --accent-2: #10b981;
+  --danger: #ef4444;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--text); }
+
+.container { max-width: 900px; margin: 0 auto; padding: 24px; }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.toolbar select { margin-left: 8px; padding: 6px 8px; border-radius: 6px; border: 1px solid #374151; background: #111827; color: var(--text); }
+
+.quiz { margin-top: 16px; display: grid; gap: 16px; }
+.progress { display: flex; justify-content: space-between; color: var(--muted); }
+.card { background: var(--card); border: 1px solid #1f2937; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.prompt { margin: 0 0 8px 0; }
+.note { margin-top: 0; color: var(--muted); }
+
+.choices { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.choice { width: 100%; text-align: left; padding: 12px 14px; border-radius: 10px; border: 1px solid #374151; background: #0b1220; color: var(--text); cursor: pointer; transition: transform .04s ease, background .1s ease, border-color .1s ease; }
+.choice:hover:enabled { transform: translateY(-1px); border-color: var(--accent); }
+.choice.selected { border-color: var(--accent); background: #0b1530; }
+.choice.correct { border-color: var(--accent-2); background: rgba(16, 185, 129, .12); }
+.choice.incorrect { border-color: var(--danger); background: rgba(239, 68, 68, .12); }
+.choice.reveal-correct { border-color: var(--accent-2); }
+.letter { display: inline-block; width: 22px; color: var(--muted); }
+
+.actions { display: flex; gap: 10px; }
+.actions button { padding: 10px 14px; border-radius: 8px; border: 1px solid #374151; background: #0b1220; color: var(--text); cursor: pointer; }
+.actions button:disabled { opacity: .6; cursor: not-allowed; }
+
+.error { color: var(--danger); }
