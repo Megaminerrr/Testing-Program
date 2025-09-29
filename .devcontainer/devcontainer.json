@@ -1,0 +1,22 @@
+{
+  "name": "Quiz App - Node LTS",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-playwright.playwright",
+        "ms-vsliveshare.vsliveshare"
+      ]
+    }
+  },
+  "postCreateCommand": "corepack enable && npm i -g pnpm@9 && pnpm -v",
+  "postStartCommand": "echo 'Devcontainer ready'",
+  "remoteUser": "node"
+}
